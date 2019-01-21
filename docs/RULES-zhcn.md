@@ -1,10 +1,19 @@
 # JavaScript Standard Style
 
-其他语言: [English](../RULES.md)、[Português](docs/RULES-ptbr.md)、[Spanish](docs/RULES-esla.md)、[繁體中文](docs/RULES-zhtw.md)
+<p align="center">
+  <a href="/docs/RULES-en.md">English</a> •
+  <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
+  <a href="/docs/RULES-fr.md">Français</a> •
+  <a href="/docs/RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/RULES-kokr.md">한국어 (Korean)</a> •
+  <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
+  <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="/docs/RULES-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
+</p>
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-这是 JavaScript [standard](https://github.com/feross/standard) 代码规范的全文。
+这是 JavaScript [standard](https://github.com/standard/standard) 代码规范的全文。
 
 掌握本规范的最好方法是安装并在自己的代码中使用它。
 
@@ -122,10 +131,12 @@
 
   ```js
   // ✗ avoid
-  if (condition) {
+  if (condition)
+  {
     // ...
   }
-  else {
+  else
+  {
     // ...
   }
   ```
@@ -310,7 +321,7 @@
 
 * **文件末尾留一空行**。
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
 * **函数调用时标识符与括号间不留间隔**。
 
@@ -361,16 +372,16 @@
   ```js
   var person = {
     set name (value) {    // ✗ avoid
-      this.name = value
+      this._name = value
     }
   }
 
   var person = {
     set name (value) {
-      this.name = value
+      this._name = value
     },
     get name () {         // ✓ ok
-      return this.name
+      return this._name
     }
   }
   ```
@@ -742,7 +753,11 @@
   ```js
   var score = 100
   function game () {
-    score: 50         // ✗ avoid
+    score: while (true) {      // ✗ avoid
+      score -= 10
+      if (score > 0) continue score
+      break
+    }
   }
   ```
 

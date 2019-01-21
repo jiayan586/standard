@@ -19,14 +19,15 @@ var test = require('tape')
 var GIT = 'git'
 var STANDARD = path.join(__dirname, '..', 'bin', 'cmd.js')
 var TMP = path.join(__dirname, '..', 'tmp')
-var PARALLEL_LIMIT = os.cpus().length
+var PARALLEL_LIMIT = Math.max(os.cpus().length - 1, 1)
 
 var argv = minimist(process.argv.slice(2), {
   boolean: [
     'disabled',
     'offline',
     'quick',
-    'quiet'
+    'quiet',
+    'fix'
   ]
 })
 
@@ -62,22 +63,17 @@ test('test github repos that use `standard`', function (t) {
     var folder = path.join(TMP, name)
     return function (cb) {
       fs.access(path.join(TMP, name), fs.R_OK | fs.W_OK, function (err) {
-        if (argv.offline) {
-          if (err) {
-            t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
-            return cb(null)
-          }
+        if (argv.offline && err) {
+          t.pass('SKIPPING (offline): ' + name + ' (' + pkg.repo + ')')
+          cb(null)
+        } else if (argv.offline) {
           runStandard(cb)
         } else {
+          var downloadPackage = err ? gitClone : gitPull
           downloadPackage(function (err) {
             if (err) return cb(err)
             runStandard(cb)
           })
-        }
-
-        function downloadPackage (cb) {
-          if (err) gitClone(cb)
-          else gitPull(cb)
         }
 
         function gitClone (cb) {
@@ -101,8 +97,35 @@ test('test github repos that use `standard`', function (t) {
           if (pkg.args) args.push.apply(args, pkg.args)
           spawn(STANDARD, args, { cwd: folder }, function (err) {
             var str = name + ' (' + pkg.repo + ')'
+            if (err && argv.fix) {
+              t.comment('Attempting --fix on ' + str)
+              runStandardFix(cb)
+            } else if (err) {
+              t.fail(str)
+              cb(null)
+            } else {
+              t.pass(str)
+              cb(null)
+            }
+          })
+        }
+
+        function runStandardFix (cb) {
+          var args = [ '--fix', '--verbose' ]
+          if (pkg.args) args.push.apply(args, pkg.args)
+          spawn(STANDARD, args, { cwd: folder }, function (err) {
+            var str = name + ' (' + pkg.repo + ') ** with --fix'
             if (err) { t.fail(str) } else { t.pass(str) }
-            cb(null)
+            runGitReset(cb)
+          })
+        }
+
+        function runGitReset (cb) {
+          var args = [ 'reset', '--hard' ]
+          spawn(GIT, args, { cwd: folder }, function (err) {
+            if (err) err.message += ' (git reset) (' + name + ')'
+            // Fatal error if can't git reset
+            cb(err)
           })
         }
       })

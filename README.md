@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/feross/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
+  <a href="https://standardjs.com"><img src="https://cdn.rawgit.com/standard/standard/master/sticker.svg" alt="Standard - JavaScript Style Guide" width="200"></a>
   <br>
   JavaScript Standard Style
   <br>
@@ -7,25 +7,25 @@
 </h1>
 
 <p align="center">
-  <a href="https://travis-ci.org/feross/standard"><img src="https://img.shields.io/travis/feross/standard/master.svg" alt="travis"></a>
+  <a href="https://travis-ci.org/standard/standard"><img src="https://img.shields.io/travis/standard/standard/master.svg" alt="travis"></a>
   <a href="https://www.npmjs.com/package/standard"><img src="https://img.shields.io/npm/v/standard.svg" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/eslint-config-standard"><img src="https://img.shields.io/npm/dm/eslint-config-standard.svg" alt="npm downloads"></a>
+  <a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme"><img src="https://img.shields.io/badge/-dependencies%20ok-brightgreen.svg?colorA=58595b&style=flat&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAYAAADJ7fe0AAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAVhJREFUKBV1kj0vBFEUhmd2sdZHh2IlGhKFQuOviEYiNlFodCqtUqPxA%2FwCjUTnDygkGoVERFQaZFlE9nreO%2BdM5u5wkifvuee892Pu3CyEcA0DeIc%2B9IwftJsR6Cko3uCjguZdjuBZhhwmYDjGrOC96WED41UtsgEdGEAPlmAfpuAbFF%2BFZLfoMfRBGzThDtLgePPwBIpdddGzOArhPHUXowbNptE2www6a%2Fm96Y3pHN7oQ1s%2B13pxt1ENaKzBFWyWzaJ%2BRO0C9Jny6VPSoKjLVbMDC5bn5OPuJF%2BBSe95PVEMuugY5AegS9fCh7BedP45hRnj8TC34QQUe9bTZyh2KgvFk2vc8GIlXyTfsvqr6bPpNgv52ynnlomZJNpB70Xhl%2Bf6Sa02p1bApEfnETwxVa%2Faj%2BW%2FFtHltmxS%2FO3krvpTtTnVgu%2F6gvHRFvG78Ef3kOe5PimJXycY74blT5R%2BAAAAAElFTkSuQmCC"></a>
   <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
 </p>
 
-<h4 align="center">One JavaScript Style to Rule Them All</h4>
-
 <p align="center">
-  Translations:
-  <a href="docs/README-ptbr.md">Português</a>,
-  <a href="docs/README-esla.md">Spanish</a>,
-  <a href="docs/README-zhtw.md">繁體中文</a>,
-  <a href="docs/README-zhcn.md">简体中文</a>
+  <a href="/docs/README-en.md">English</a> •
+  <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
+  <a href="/docs/README-fr.md">Français</a> •
+  <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
+  <a href="/docs/README-ptbr.md">Português (Brasil)</a> •
+  <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
+  <a href="/docs/README-zhtw.md">繁體中文 (Taiwanese Mandarin)</a>
 </p>
 
-<br>
-
-## JavaScript style guide, with linter & automatic code fixer
+## JavaScript style guide, linter, and formatter
 
 This module saves you (and others!) time in three ways:
 
@@ -45,34 +45,40 @@ Install with:
 npm install standard --save-dev
 ```
 
-## The Rules
+### Open Source Supporters
+
+<a href="https://tidelift.com/subscription/pkg/npm-standard?utm_source=npm-standard&utm_medium=readme" target='_blank'><img src='https://feross.org/images/supporters/tidelift.png' width=250></a>
+
+[Become a supporter!](https://feross.org/thanks/)
+
+## StandardJS — The Rules
 
 - **2 spaces** – for indentation
 - **Single quotes for strings** – except to avoid escaping
 - **No unused variables** – this one catches *tons* of bugs!
 - **No semicolons** – [It's][1] [fine.][2] [Really!][3]
-- **Never start a line with `(`, `[`, or `` ` ``**
-  - This is the **only** gotcha with omitting semicolons – *automatically checked for you!*
   - [More details][4]
 - **Space after keywords** `if (condition) { ... }`
 - **Space after function name** `function name (arg) { ... }`
 - Always use `===` instead of `==` – but `obj == null` is allowed to check `null || undefined`.
 - Always handle the node.js `err` function parameter
-- Always prefix browser globals with `window` – except `document` and `navigator` are okay
-  - Prevents accidental use of poorly-named browser globals like `open`, `length`,
+- Declare browser globals with `/* global */` comment at top of file
+  - Prevents accidental use of vaguely-named browser globals like `open`, `length`,
     `event`, and `name`.
+  - Example: `/* global alert, prompt */`
+  - Exceptions are: `window`, `document`, and `navigator`
 - **And [more goodness][5]** – *give `standard` a try today!*
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: RULES.md#semicolons
-[5]: RULES.md#javascript-standard-style
+[4]: /RULES.md#semicolons
+[5]: /RULES.md#javascript-standard-style
 
 To get a better idea, take a look at
 [a sample file](https://github.com/expressjs/body-parser/blob/master/index.js) written
 in JavaScript Standard Style. Or, check out one of the
-[thousands of projects](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+[thousands of projects](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 that use `standard`!
 
 ## Table of Contents
@@ -95,12 +101,12 @@ that use `standard`!
   - [How do I use experimental JavaScript (ES Next) features?](#how-do-i-use-experimental-javascript-es-next-features)
   - [Can I use a JavaScript language variant, like Flow or TypeScript?](#can-i-use-a-javascript-language-variant-like-flow-or-typescript)
   - [What about Mocha, Jasmine, QUnit, etc?](#what-about-mocha-jasmine-qunit-etc)
-  - [What about Web Workers?](#what-about-web-workers)
+  - [What about Web Workers and Service Workers?](#what-about-web-workers-and-service-workers)
   - [Can I check code inside of Markdown or HTML files?](#can-i-check-code-inside-of-markdown-or-html-files)
   - [Is there a Git `pre-commit` hook?](#is-there-a-git-pre-commit-hook)
-  - [How do I make the output all colorful and *pretty*?](#how-do-i-make-the-output-all-colorful-and-pretty)
+  - [How do I make the output all colorful and pretty?](#how-do-i-make-the-output-all-colorful-and-pretty)
   - [Is there a Node.js API?](#is-there-a-nodejs-api)
-  - [How do I contribute to `standard`?](#how-do-i-contribute-to-standard)
+  - [How do I contribute to StandardJS?](#how-do-i-contribute-to-standardjs)
 - [License](#license)
 
 ## Install
@@ -190,30 +196,38 @@ community conventions higher than personal style. This might not make sense for
 place for newbies. Setting up clear, automated contributor expectations makes a
 project healthier.
 
+For more info, see the conference talk ["Write Perfect Code with Standard and
+ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). In this talk, you'll learn
+about linting, when to use `standard` versus `eslint`, and how `prettier` compares
+to `standard`.
+
 ## Who uses JavaScript Standard Style?
 
 Lots of folks!
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/opbeat.png>](https://opbeat.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/brave.png>](https://www.brave.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) |
 |---|---|---|---|---|
 
-| [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/typeform.jpg>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+| [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
 |---|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/feross/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
+|---|---|---|---|---|
+
+[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) | |
 |---|---|---|---|---|
 
 In addition to companies, many community members use `standard` on packages that
-are [too numerous](https://raw.githubusercontent.com/feross/standard-packages/master/all.json)
+are [too numerous](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 to list here.
 
 `standard` is also the top-starred linter in GitHub's
@@ -265,14 +279,21 @@ For JS snippets, install: **[vscode-standardjs-snippets][vscode-2]**. For React 
 
 ### Vim
 
-Install **[ale][vim-1]**.
-
-For automatic formatting on save, add these lines to `.vimrc`:
+Install **[ale][vim-1]**. And add these lines to your `.vimrc` file.
 
 ```vim
-autocmd bufwritepost *.js silent !standard --fix %
-set autoread
+let g:ale_linters = {
+\   'javascript': ['standard'],
+\}
+let g:ale_fixers = {'javascript': ['standard']}
 ```
+
+This sets standard as your only linter and fixer for javascript files and so prevents conflicts with eslint. For linting and automatic fixing on save, add these lines to `.vimrc`:
+```vim
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1
+```
+
 
 Alternative plugins to consider include [neomake][vim-2] and [syntastic][vim-3], both of which have built-in support for `standard` (though configuration may be necessary).
 
@@ -308,10 +329,10 @@ If you still prefer to configure `standard` manually, [follow this guide][websto
 Yes! If you use `standard` in your project, you can include one of these badges in
 your readme to let people know that your code is using the standard style.
 
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 ```md
-[![JavaScript Style Guide](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
+[![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 ```
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -330,10 +351,16 @@ that's the whole philosophy of `standard` -- its a bunch of sensible 'just pick
 something' opinions. Hopefully, users see the value in that over defending their
 own opinions.
 
+There are a couple of similar packages for anyone who does not want to completely accept `standard`:
+- [semistandard](https://github.com/Flet/semistandard) - standard, with semicolons
+- [standardx](https://github.com/standard/standardx) - standard, with custom tweaks
+
 If you really want to configure hundreds of ESLint rules individually, you can
 always use `eslint` directly with
-[eslint-config-standard](https://github.com/feross/eslint-config-standard) to
+[eslint-config-standard](https://github.com/standard/eslint-config-standard) to
 layer your changes on top.
+[`standard-eject`](https://github.com/josephfrazier/standard-eject) can help
+you migrate from `standard` to `eslint` and `eslint-config-standard`.
 
 Pro tip: Just use `standard` and move on. There are actual real problems that you
 could spend your time solving! :P
@@ -343,7 +370,7 @@ could spend your time solving! :P
 ## But this isn't a real web standard!
 
 Of course it's not! The style laid out here is not affiliated with any official web
-standards groups, which is why this repo is called `feross/standard` and not
+standards groups, which is why this repo is called `standard/standard` and not
 `ECMA/standard`.
 
 The word "standard" has more meanings than just "web standard" :-) For example:
@@ -593,16 +620,22 @@ module.
 
 *Note: `env` and `envs` are equivalent.*
 
-## What about Web Workers?
+## What about Web Workers and Service Workers?
 
-Add this to the top of worker files:
+Add this to the top of web worker files:
 
 ```js
-/* eslint-env serviceworker */
+/* eslint-env worker */
 ```
 
 This lets `standard` (as well as humans reading the code) know that `self` is a
 global in web worker code.
+
+For Service workers, add this instead:
+
+```js
+/* eslint-env serviceworker */
+```
 
 ## Can I check code inside of Markdown or HTML files?
 
@@ -639,14 +672,25 @@ $ standard --plugin html '**/*.html'
 
 Funny you should ask!
 
-```sh
-#!/bin/sh
-# Ensure all javascript files staged for commit pass standard code style
-git diff --name-only --cached --relative | grep '\.jsx\?$' | xargs standard
-if [ $? -ne 0 ]; then exit 1; fi
+```bash
+#!/bin/bash
+
+# Ensure all JavaScript files staged for commit pass standard code style
+function xargs-r() {
+  # Portable version of "xargs -r". The -r flag is a GNU extension that
+  # prevents xargs from running if there are no input files.
+  if IFS= read -r -d $'\n' path; then
+    { echo "$path"; cat; } | xargs $@
+  fi
+}
+git diff --name-only --cached --relative | grep '\.jsx\?$' | sed 's/[^[:alnum:]]/\\&/g' | xargs-r -E '' -t standard
+if [[ $? -ne 0 ]]; then
+  echo 'JavaScript Standard Style errors were detected. Aborting commit.'
+  exit 1
+fi
 ```
 
-## How do I make the output all colorful and *pretty*?
+## How do I make the output all colorful and pretty?
 
 The built-in output is simple and straightforward, but if you like shiny things,
 install [snazzy](https://www.npmjs.com/package/snazzy):
@@ -734,29 +778,30 @@ var opts = {
 
 The `callback` will be called with an `Error` and `results` object (same as above).
 
-## How do I contribute to `standard`?
+## How do I contribute to StandardJS?
 
-Contributions are welcome! Check out the [issues](https://github.com/feross/standard/issues) or the [PRs](https://github.com/feross/standard/pulls), and make your own if you want something that you don't see there.
+Contributions are welcome! Check out the [issues](https://github.com/standard/standard/issues) or the [PRs](https://github.com/standard/standard/pulls), and make your own if you want something that you don't see there.
 
 Want to chat? Join contributors on IRC in the `#standard` channel on freenode.
 
 Here are some important packages in the `standard` ecosystem:
 
-- **[standard](https://github.com/feross/standard)** - this repo
+- **[standard](https://github.com/standard/standard)** - this repo
   - **[standard-engine](https://github.com/flet/standard-engine)** - cli engine for arbitrary eslint rules
-  - **[eslint-config-standard](https://github.com/feross/eslint-config-standard)** - eslint rules for standard
-  - **[eslint-config-standard-jsx](https://github.com/feross/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
+  - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - eslint rules for standard
+  - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - eslint rules for standard (JSX)
   - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - custom eslint rules for standard (not part of eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - the linter that powers standard
-- **[snazzy](https://github.com/feross/snazzy)** - pretty terminal output for standard
-- **[standard-www](https://github.com/feross/standard-www)** - code for https://standardjs.com
+- **[snazzy](https://github.com/standard/snazzy)** - pretty terminal output for standard
+- **[standard-www](https://github.com/standard/standard-www)** - code for https://standardjs.com
 - **[semistandard](https://github.com/Flet/semistandard)** - standard, with semicolons (if you must)
+- **[standardx](https://github.com/standard/standardx)** - standard, with custom tweaks
 
 There are also many **[editor plugins](#are-there-text-editor-plugins)**, a list of
-**[npm packages that use `standard`](https://github.com/feross/standard-packages)**,
+**[npm packages that use `standard`](https://github.com/standard/standard-packages)**,
 and an awesome list of
-**[packages in the `standard` ecosystem](https://github.com/feross/awesome-standard)**.
+**[packages in the `standard` ecosystem](https://github.com/standard/awesome-standard)**.
 
 ## License
 
-[MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](http://feross.org).
+[MIT](LICENSE). Copyright (c) [Feross Aboukhadijeh](https://feross.org).

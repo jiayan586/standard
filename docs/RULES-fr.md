@@ -13,13 +13,13 @@
 
 [![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
-Esto es un TL;DR (muy largo, no lo leí) de reglas JavaScript [standard](https://github.com/standard/standard).
+Ceci est un sommaire des règles du [standard](https://github.com/standard/standard) JavaScript.
 
-La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba en tu código.
+La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l'essayer dans votre code.
 
-## Reglas
+## Règles
 
-* **Usar 2 espacios** como sangría.
+* **Utilisez 2 espaces** pour l'indentation.
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -29,62 +29,62 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Usar comillas simples en cadenas de texto** con la excepcion para evitar escapado de texto
+* **Utilisez les apostrophes (') pour le texte** à part pour éviter un caractère d'échappement.
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
   ```js
-  console.log('hello there') // comillas simples
-  $("<div class='box'>") // escapado de texto
+  console.log('hello there')
+  $("<div class='box'>")
   ```
 
-* **No dejar variables sin usar.**
+* **Pas de variables non-utilisées.**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
   function myFunction () {
-    var result = something()   // ✗ evitar
+    var result = something()   // ✗ avoid
   }
   ```
 
-* **Espacio después de las palabras claves.**
+* **Ajoutez un espace après les mots clés.**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
   ```js
   if (condition) { ... }   // ✓ ok
-  if(condition) { ... }    // ✗ evitar
+  if(condition) { ... }    // ✗ avoid
   ```
 
-* **Agregar un espacio antes de los paréntesis de la función declarada**
+* **Ajoutez un espace avant les parenthèses de déclaration de fonction.**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
   ```js
   function name (arg) { ... }   // ✓ ok
-  function name(arg) { ... }    // ✗ evitar
+  function name(arg) { ... }    // ✗ avoid
 
   run(function () { ... })      // ✓ ok
-  run(function() { ... })       // ✗ evitar
+  run(function() { ... })       // ✗ avoid
   ```
 
-* **Usar siempre** `===` en vez de `==`.<br>
-  Exception: `obj == null` is allowed to check for `null || undefined`.
+* **Utilisez toujours** `===` au lieu de `==`.<br>
+  Exception: `obj == null` est autorisé pour vérifier `null || undefined`.
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
   ```js
   if (name === 'John')   // ✓ ok
-  if (name == 'John')    // ✗ evitar
+  if (name == 'John')    // ✗ avoid
   ```
 
   ```js
   if (name !== 'John')   // ✓ ok
-  if (name != 'John')    // ✗ evitar
+  if (name != 'John')    // ✗ avoid
   ```
 
-* **Operadores infijos** deben ser espaciados.
+* **Les opérateurs infixes** doivent être espacés.
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -95,12 +95,12 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   var x=2
   var message = 'hello, '+name+'!'
   ```
 
-* **Comas deben tener un espacio** despues de ellas.
+* **Les virgules doivent être suivies d'un espace**.
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -111,12 +111,12 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   var list = [1,2,3,4]
   function greet (name,options) { ... }
   ```
 
-* **Mantener declaracion else** en la misma linea que sus llaves.
+* **Gardez les 'else'** sur la même ligne que leurs accolades.
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -130,7 +130,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   if (condition) {
     // ...
   }
@@ -139,7 +139,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Para declaraciones if multi-linea** debe usar llaves.
+* **Pour les conditions 'if',** utilisez des accolades.
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -156,12 +156,12 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   if (options.quiet !== true)
     console.log('done')
   ```
 
-* **Siempre gestionar** el parámetro `err` en las funciones.
+* **Gérez toujours le paramètre de fonction `err`**.
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -173,14 +173,24 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   run(function (err) {
     window.alert('done')
   })
   ```
 
-* **En las variables globales usar el sufijo** `window.`.<br>
-  Con la excepcion de: `document`, `console` y `navigator`.
+* **Déclarez les globales de navigateur** avec le commentaire `/* global */`.<br>
+  Les exceptions sont: `window`, `document` et `navigator`.<br>
+  Prévenez l'utilisation accidentelle de globales comme `open`, `length`, `event`, et `name`.
+
+  ```js
+  /* global alert, prompt */
+
+  alert('hi')
+  prompt('ok?')
+  ```
+
+  Référencer explicitement la fonction ou propriété sur `window` est aussi ok, bien que ce code ne marchera pas dans un Worker qui utilise `self` au lieu de `window`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
 
@@ -188,7 +198,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   window.alert('hi')   // ✓ ok
   ```
 
-* **Múltiples líneas en blanco no está permitido.**
+* **Plusieurs lignes vides ne sont pas autorisées.**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -199,14 +209,14 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
   ```js
-  // ✗ evitar
+  // ✗ avoid
   var value = 'hello world'
 
 
   console.log(value)
   ```
 
-* **Para el operador ternario** en multi-linea, colocar el `?` y `:` en su propia nueva linea.
+* **Pour l'opérateur ternaire** sur plusieurs lignes, placez `?` et `:` sur leurs propres lignes.
 
   eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
 
@@ -219,13 +229,13 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     ? 'localhost'
     : 'www.api.com'
 
-  // ✗ evitar
+  // ✗ avoid
   var location = env.development ?
     'localhost' :
     'www.api.com'
   ```
 
-* **Para declaraciones var,** escribir solo una asignación en cada declaracion
+* **Pour les déclarations var,** écrivez chaque déclaration avec leur propre affectation.
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -234,15 +244,15 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var silent = true
   var verbose = true
 
-  // ✗ evitar
+  // ✗ avoid
   var silent = true, verbose = true
 
-  // ✗ evitar
+  // ✗ avoid
   var silent = true,
       verbose = true
   ```
 
-* **Envolver asignaciones condicionales** con paréntesis adicionales. Esto hace claro que la intención de la expresión es una asignación y no un error de igualdad (`===`).
+* **Entourez les déclarations conditionelles** avec des parenthèses supplémentaires. Cela rend plus clair que l'expression est intentionellement une affectation (`=`) au lieu d'une typo pour égalité (`===`).
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -252,22 +262,22 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     // ...
   }
 
-  // ✗ evitar
+  // ✗ avoid
   while (m = text.match(expr)) {
     // ...
   }
   ```
 
-* **Agregar espacios dentro de bloques de una sola linea.**
+* **Ajoutez des espaces dans les blocs écris sur une ligne.**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
   ```js
-    function foo () {return true}    // ✗ evitar
+    function foo () {return true}    // ✗ avoid
     function foo () { return true }  // ✓ ok
   ```
 
-* **Usar camelcase al nombre variables y funciones.**
+* **Utilisez la syntaxe CamelCase quand vous nommez les variables et fonctions.**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
@@ -279,7 +289,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **Comas adicionales no esta permitido.**
+* **Les virgules en fin de ligne ne sont pas autorisées.**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
@@ -289,7 +299,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     }
   ```
 
-* **Comas deben colocarse al final de la linea actual.**
+* **Les virgules doivent être placées à la fin de la ligne courante.**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -305,7 +315,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     }
   ```
 
-* **El Puto debe ir en la misma linea que la propiedad.**
+* **Le point doit être sur la même ligne que la propriété.**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -317,11 +327,11 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
       .log('hello') // ✓ ok
   ```
 
-* **Archivos deben terminar con una nueva linea.**
+* **Les fichiers doivent finir avec un nouvelle ligne.**
 
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+  eslint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
-* **Sin espacios entre el identificador de la funcion y su invocación.**
+* **Pas d'espace entre les identifiants de fonction et leurs invocations.**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -330,7 +340,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   console.log('hello')  // ✓ ok
   ```
 
-* **Agregar espacio entre dos puntos (colon) y pares clave valor.**
+* **Ajoutez un espace entre les deux points et la valeur dans les combinaisons clé/valeur.**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -341,7 +351,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **Nombres de Constructor deben empezar con letra Mayúscula.**
+* **Les noms de constructeur doivent commencer avec une lettre capitale.**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -353,7 +363,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var dog = new Animal()    // ✓ ok
   ```
 
-* **Constructor sin argumentos debe ser invocado con paréntesis.**
+* **Un constructeur sans argument doit être invoqué avec des parenthèses.**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -363,7 +373,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var dog = new Animal()  // ✓ ok
   ```
 
-* **Objetos deben contener un getter cuando se ha definido un setter.**
+* **Les objets doivent contenir un 'getter' quand un 'setter' est défini.**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -384,7 +394,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Constructores de clases derivadas deben llamar `super`.**
+* **Les constructeurs de classes dérivées doivent appeler `super`.**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -402,7 +412,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Usar array literales en vez de array constructor.**
+* **Pour les tableaux (arrays), utilisez les expressions littérales au lieu des constructeurs.**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -411,7 +421,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **Evitar usar arguments.calle y arguments.caller.**
+* **Évitez d'utiliser `arguments.callee` et `arguments.caller`.**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -429,7 +439,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar modificar variables que fueron declaradas como clase.**
+* **Évitez de modifier les variables dans les déclarations de classes.**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -438,7 +448,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **Evitar modifidicar variables declaracas usando `const`.**
+* **Évitez de modifier les variables declarées avec `const`.**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -447,7 +457,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   score = 125       // ✗ avoid
   ```
 
-* **Evitar usar expresiones constantes en condicionales (a excepcion de búcles).**
+* **Évitez d'utiliser les expressions constantes dans les conditions (à part dans les boucles).**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -465,7 +475,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar carácteres de control de expresiones regulares.**
+* **Pas de charactère de contrôle dans les expressions régulières.**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -474,7 +484,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **Evitar sentencias `debugger`.**
+* **Pas de `debugger`.**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -484,7 +494,8 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     return a + b
   }
   ```
-* **Evitar operador delete en variables.**
+
+* **Pas d'opérateur `delete` sur les variables.**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -493,7 +504,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   delete name     // ✗ avoid
   ```
 
-* **Evitar argumentos duplicados en definicion de funciones.**
+* **Pas d'arguments dupliqués dans les définitions de fonction.**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -507,7 +518,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar duplicados en miembros de clase.**
+* **Pas de noms dupliqués dans les membres de classe.**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -518,7 +529,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar duplicado de claves en objetos literales.**
+* **Pas de clés dupliquées dans les objets littéraux.**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -529,7 +540,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar dublicados de etiqueta `case` en sentencias `switch`.**
+* **Pas de label `case` dupliqué dans les blocs `switch`.**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -541,7 +552,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Usar una unica sentencia `import` por modulo.**
+* **Utilisez une seule instruction d'import par module.**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -552,7 +563,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   import { myFunc1, myFunc2 } from 'module' // ✓ ok
   ```
 
-* **Evitar classes de carácteres vacia en expresiones regulares.**
+* **Pas de classes de charactères vides dans les expressions régulières.**
 
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
@@ -561,7 +572,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const myRegex = /^abc[a-z]/   // ✓ ok
   ```
 
-* **Evitar pratones de destructuración vacios.**
+* **Pas d'affectation par décomposition vide.**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -570,7 +581,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **Evitar uso de `eval()`.**
+* **N'utilisez pas `eval()`.**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -579,7 +590,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var result = user[propName]             // ✓ ok
   ```
 
-* **Evitar reasignar excepciones en clausas `catch`.**
+* **Ne réaffectez pas les exceptions dans les clauses `catch`.**
 
   eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
 
@@ -597,7 +608,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar extender objetos nativos**
+* **N'étendez pas les objet natifs.**
 
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
@@ -605,7 +616,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **Evitar uso innecesario de bind en funciones.**
+* **Evitez les liens de fonctions inutiles.**
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -619,7 +630,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }.bind(user)    // ✓ ok
   ```
 
-* **Evitar hacer cast a booleanos.**
+* **Evitez les modifications de booléens inutiles.**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -635,7 +646,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar paréntesis inncesario alrededor de expresión de funciones.**
+* **Pas de parenthèses inutiles autour des expressions de fonction.**
 
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
@@ -644,7 +655,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const myFunc = function () { }     // ✓ ok
   ```
 
-* **Usar `break` para evitar pasar de largo `fallthrough` en casos `switch`.**
+* **Utilisez `break` pour éviter de continuer dans les cas de `switch`.**
 
   eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
 
@@ -673,7 +684,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar decimales flotantes.**
+* **Pas de nombre décimal sans partie entière.**
 
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
@@ -682,7 +693,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const discount = 0.5     // ✓ ok
   ```
 
-* **Evitar reasignación de declaraciones de funciones.**
+* **Evitez de réaffecter les déclarations de fonction.**
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -691,7 +702,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
-* **Evitar reasignación de variables globales de solo-lectura.**
+* **Ne réaffectez pas les variables globales 'read-only'.**
 
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
@@ -699,7 +710,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   window = {}     // ✗ avoid
   ```
 
-* **Evitar usar eval() implícito.**
+* **Pas d'`eval()` implicite.**
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -708,7 +719,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
-* **Evitar declaracion de funciones en bloques anidados.**
+* **Pas de déclaration de fonction dans les blocs imbriqués.**
 
   eslint: [`no-inner-declarations`](http://eslint.org/docs/rules/no-inner-declarations)
 
@@ -718,7 +729,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar cadenas de texto expresiones regulares invalidas en costructores `RegExp`.**
+* **Pas d'expressions régulières invalides dans les constructeurs  `RegExp`.**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -727,7 +738,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   RegExp('[a-z]')   // ✓ ok
   ```
 
-* **Evitar espacios en blanco irregulares.**
+* **Pas d'espace blanc irrégulier.**
 
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
@@ -735,7 +746,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **Evitar uso de `__iterator__`.**
+* **N'utilisez pas `__iterator__`.**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -743,7 +754,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
   ```
 
-* **Evitar etiquetas que comparten el nombre de una variable en scope.**
+* **Pas d'étiquette qui partage un nom avec une variable dans le scope.**
 
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
@@ -758,7 +769,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar sentencias etiquetadas.**
+* **Pas d'instruction d'étiquette.**
 
   eslint: [`no-labels`](http://eslint.org/docs/rules/no-labels)
 
@@ -769,7 +780,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     }
   ```
 
-* **Evitar bloques anidados innecesarios**
+* **Pas de blocs imbriqués inutiles.**
 
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
@@ -785,11 +796,11 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar mezclar espacios y tabulaciones para sangría**
+* **Evitez de mélanger les espaces et les tabulations pour l'indentation.**
 
   eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
 
-* **Evitar uso de espacios en blanco multiples a excepcion de sangría**
+* **N'utilisez pas les espaces multiples à part pour l'indentation.**
 
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
@@ -798,7 +809,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const id = 1234       // ✓ ok
   ```
 
-* **Evitar cadenas de texto multi-linea**
+* **Pas de chaines de charactères multi-lignes.**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
 
@@ -807,7 +818,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
                    world'     // ✗ avoid
   ```
 
-* **Evitar usar `new` sin asignar a el objecto a una variable**
+* **Pas de `new` sans attribuer un objet à une variable.**
 
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
@@ -816,7 +827,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const character = new Character()   // ✓ ok
   ```
 
-* **Evitar uso de constructor `Function`.**
+* **N'utilisez pas le constructeur `Function`.**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -824,7 +835,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **Evitar uso de constructor `Object`**
+* **N'utilisez pas le constructeur `Object`.**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -832,7 +843,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   let config = new Object()   // ✗ avoid
   ```
 
-* **Evitar uso de `new require`.**
+* **N'utilisez pas `new require`.**
 
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
@@ -840,7 +851,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **Evitar uso de constructor `Symbol`.**
+* **N'utilisez pas le constructeur `Symbol`.**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -848,7 +859,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const foo = new Symbol('foo')   // ✗ avoid
   ```
 
-* **Evitar envolturas de instancias primitivas.**
+* **N'utilisez pas les instances d'emballage de types primitifs.**
 
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
@@ -856,7 +867,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const message = new String('hello')   // ✗ avoid
   ```
 
-* **Evitar llamar propiedades de objetos globles como funciones.**
+* **N'appelez pas les propriétes d'objets globaux en tant que fonctions.**
 
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
@@ -864,7 +875,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const math = Math()   // ✗ avoid
   ```
 
-* **Evitar uso de octal literal.**
+* **Pas de littéraux en base octal.**
 
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
@@ -873,7 +884,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const num = '042'   // ✓ ok
   ```
 
-* **Evitar escapado de secuencia octal en cadena de texto literal.**
+* **Pas de séquence d'echappement octale dans les chaines de charactères littérales.**
 
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
@@ -881,7 +892,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const copyright = 'Copyright \251'  // ✗ avoid
   ```
 
-* **Evitar concatenacion de cadena de texto para `__dirname` y `__filename`.**
+* **Evitez les concaténations de chaines de charactères quand vous utilisez `__dirname` et `__filename`.**
 
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
@@ -890,7 +901,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
 
-* **Evitar uso de `__proto__`.** Use `getPrototypeOf` en su lugar.
+* **Evitez d'utiliser `__proto__`.** Utilisez plutôt `getPrototypeOf`.
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -899,7 +910,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const foo = Object.getPrototypeOf(obj)  // ✓ ok
   ```
 
-* **Evitar re-reclaración de variables.**
+* **Ne redéclarez pas les variables.**
 
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
@@ -911,7 +922,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   name = 'Jane'         // ✓ ok
   ```
 
-* **Evitar multiples espacios en expresiones regulares.**
+* **Evitez d'utiliser plusieurs espaces dans les expressions regulières.**
 
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
@@ -922,7 +933,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const regexp = /test value/     // ✓ ok
   ```
 
-* **Asignación de variables en el retorno de funciones debe estar rodeado de paréntesis.**
+* **Les affectations dans les instructions de retour doivent être entre parenthèses.**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -936,7 +947,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar asignar una variable a si misma.**
+* **Evitez d'affecter une variable à elle-même.**
 
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
@@ -944,15 +955,15 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   name = name   // ✗ avoid
   ```
 
-* **Evitar comparar una variable consigo mismo.**
+* **Evitez de comparer une variable à elle-même.**
 
-  esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
+  eslint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
   ```js
   if (score === score) {}   // ✗ avoid
   ```
 
-* **Evitar uso de secuencia separado po comma.**
+* **Evitez d'utiliser l'opérateur virgule.**
 
   eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
 
@@ -960,7 +971,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   if (doSomething(), !!test) {}   // ✗ avoid
   ```
 
-* **Nombres restringidos no deben ser cambiados (shadowed).**
+* **Les mots réservés ne doivent pas être affectés.**
 
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
@@ -968,7 +979,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   let undefined = 'value'     // ✗ avoid
   ```
 
-* **Array dispersos no estan permitidos.**
+* **Les tableaux avec des valeurs vides ne sont pas autorisés.**
 
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
@@ -976,11 +987,11 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **No se deben usar Tabulaciones.**
+* **Les tabulations ne devraient pas être utilisées**
 
-  eslint: [`no-tabs`](http://eslint.org/docs/rule
+  eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **Cadenas de textos regulares no deben contener placeholders de plantillas literales.**
+* **Les chaines de charactères normales ne doivent pas contenir de placeholder pour les modèles de libellés.**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
@@ -989,7 +1000,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **`super()` debe ser llamado inmediatamente antes de usar `this`.**
+* **`super()` doit être appelé avant d'utiliser `this`.**
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -1002,7 +1013,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Solo se puede lanzar (`throw`) un objecto `Error`.**
+* **N'utilisez `throw` que pour l'objet `Error`.**
 
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
@@ -1011,11 +1022,11 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   throw new Error('error')    // ✓ ok
   ```
 
-* **Espacios en blanco despues del final linea no estan permitidos .**
+* **Les espaces blancs ne sont pas autorisés en fin de ligne.**
 
   eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
-* **Inicializar una variable con `undefined` no esta permitido.**
+* **Initialiser avec `undefined` n'est pas autorisé.**
 
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
@@ -1026,7 +1037,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   name = 'value'          // ✓ ok
   ```
 
-* **Búcles no modificados no estan permitidos.**
+* **Pas de réutilisation de conditions dans les boucles.**
 
   eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
@@ -1035,16 +1046,16 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
- * **Evitar usar operador ternario cuando existe una alternative mas simple.**
+* **Pas d'opérateur ternaire quand d'autres alternatives existent.**
 
-   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
+  eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
-   ```js
-   let score = val ? val : 0     // ✗ avoid
-   let score = val || 0          // ✓ ok
-   ```
+  ```js
+  let score = val ? val : 0     // ✗ avoid
+  let score = val || 0          // ✓ ok
+  ```
 
-* **Evitar dejar código inalcanzable despues de sentencias `return`, `throw`, `continue`, y `break` .**
+* **Pas de code inaccessible apres les instructions `return`, `throw`, `continue`, et `break`.**
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1055,7 +1066,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **Evitar sentencias de control de flujo en bloques `finally`.**
+* **Pas d'instruction de flow d'opération dans les blocs `finally`.**
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1069,15 +1080,16 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   }
   ```
 
-* **El operando izquierdo en operaciones relacionales no debe ser negado.**
+* **Dans les opérateurs relationels, l'élément de gauche ne doit pas etre nié.**
 
   eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
 
   ```js
   if (!key in obj) {}       // ✗ avoid
+  if (!(key in obj)) {}     // ✓ ok
   ```
 
-* **Evitar uso inncesario de `.call()` y `.apply()`.**
+* **Evitez l'usage inutile de`.call()` et `.apply()`.**
 
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
@@ -1085,130 +1097,141 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
- * **Evitar usar constructores innecesarios.**
+* **Evitez d'utiliser les propriétés calculées inutiles dans les objets.**
 
-   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
+  eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
-   ```js
-   const user = { ['name']: 'John Doe' }   // ✗ avoid
-   const user = { name: 'John Doe' }       // ✓ ok
-   ```
+  ```js
+  const user = { ['name']: 'John Doe' }   // ✗ avoid
+  const user = { name: 'John Doe' }       // ✓ ok
+  ```
 
- * **Evitar uso inncesario de escapado de text.**
+* **Pas de constructeur inutile.**
 
-   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
+  eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
-   ```js
-   let message = 'Hell\o'  // ✗ avoid
-   ```
+  ```js
+  class Car {
+    constructor () {      // ✗ avoid
+    }
+  }
+  ```
 
- * **Renombrar import, export o destructuración con el mismo nombre  no esta permitido**
+* **Pas d'utilisation inutile de l'idenificateur échappé.**
 
-   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
+  eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
-   ```js
-   import { config as config } from './config'     // ✗ avoid
-   import { config } from './config'               // ✓ ok
-   ```
+  ```js
+  let message = 'Hell\o'  // ✗ avoid
+  ```
 
- * **Evitar espacios en blanco antes de una propiedad.**
+* **Utiliser le même nom pour renommer import, export, et les affectations par décomposition n'est pas autorisé.**
 
-   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
+  eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
-   ```js
-   user .name      // ✗ avoid
-   user.name       // ✓ ok
-   ```
+  ```js
+  import { config as config } from './config'     // ✗ avoid
+  import { config } from './config'               // ✓ ok
+  ```
 
- * **Evitar uso de sentencia `with`.**
+* **Pas d'espace blanc avant les propriétés.**
 
-   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
+  eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
-   ```js
-   with (val) {...}    // ✗ avoid
-   ```
+  ```js
+  user .name      // ✗ avoid
+  user.name       // ✓ ok
+  ```
 
- * **Mantener consistencia de nuevas lineas entre las propiedades de un objecto .**
+* **N'utilisez pas d'instructions avec `with`.**
 
-   eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
+  eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
-   ```js
-   const user = {
-     name: 'Jane Doe', age: 30,
-     username: 'jdoe86'            // ✗ avoid
-   }
+  ```js
+  with (val) {...}    // ✗ avoid
+  ```
 
-   const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
+* **Soyez consistent dans la structure des propriétés d'objet.**
 
-   const user = {
-     name: 'Jane Doe',
-     age: 30,
-     username: 'jdoe86'
-   }                                                                 // ✓ ok
-   ```
+  eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
 
- * **Evitar espacios de relleno entre bloques.**
+  ```js
+  const user = {
+    name: 'Jane Doe', age: 30,
+    username: 'jdoe86'            // ✗ avoid
+  }
 
-   eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
+  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
 
-   ```js
-   if (user) {
-                               // ✗ avoid
-     const name = getName()
+  const user = {
+    name: 'Jane Doe',
+    age: 30,
+    username: 'jdoe86'
+  }                                                                 // ✓ ok
+  ```
 
-   }
+* **Pas d'espace a l'intérieur des blocs.**
 
-   if (user) {
-     const name = getName()    // ✓ ok
-   }
-   ```
+  eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
 
- * **Evitar espacios en blanco entre el operador de propagacion y la expresion**
+  ```js
+  if (user) {
+                              // ✗ avoid
+    const name = getName()
 
-   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
+  }
 
-   ```js
-   fn(... args)    // ✗ avoid
-   fn(...args)     // ✓ ok
-   ```
+  if (user) {
+    const name = getName()    // ✓ ok
+  }
+  ```
 
- * **Punto y coma (semicolon) debe tener un espacio en blanco despues y no antes.**
+* **Pas d'espace blanc entre les opérateurs de décomposition and leurs expressions.**
 
-   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
+  eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
-   ```js
-   for (let i = 0 ;i < items.length ;i++) {...}    // ✗ avoid
-   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
-   ```
+  ```js
+  fn(... args)    // ✗ avoid
+  fn(...args)     // ✓ ok
+  ```
 
- * **Mantener espacio despues de los bloques.**
+* **Les point-virgules doivent avoir suivis mais pas précédés d'un espace.**
 
-   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
+  eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
-   ```js
-   if (admin){...}     // ✗ avoid
-   if (admin) {...}    // ✓ ok
-   ```
+  ```js
+  for (let i = 0 ;i < items.length ;i++) {...}    // ✗ avoid
+  for (let i = 0; i < items.length; i++) {...}    // ✓ ok
+  ```
 
- * **Evitar espacios en blanco entre paréntesis.**
+* **Ajoutez un espace avant les blocs.**
 
-   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
+  eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
-   ```js
-   getName( name )     // ✗ avoid
-   getName(name)       // ✓ ok
-   ```
+  ```js
+  if (admin){...}     // ✗ avoid
+  if (admin) {...}    // ✓ ok
+  ```
 
- * **Operador unario debe tener espacio en blanco despues.**
+* **Pas d'espace a l'intérieur des parenthèses.**
 
-   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
+  eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
-   ```js
-   typeof!admin        // ✗ avoid
-   typeof !admin        // ✓ ok
-   ```
+  ```js
+  getName( name )     // ✗ avoid
+  getName(name)       // ✓ ok
+  ```
 
- * **Usar espacios dentro de comentarios.**
+* **Les opérateurs unaires doivent être suivis d'un espace.**
+
+  eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
+
+  ```js
+  typeof!admin        // ✗ avoid
+  typeof !admin        // ✓ ok
+  ```
+
+* **Utilisez des espaces à l'intérieur des commentaires.**
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1220,7 +1243,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   /* comment */       // ✓ ok
   ```
 
- * **Evitar espacios en blanco dentro de placeholders de plantillas literales.**
+* **Pas d'espace dans les modèles de libellés.**
 
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
@@ -1229,7 +1252,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const message = `Hello, ${name}`      // ✓ ok
   ```
 
-* **Usar `isNaN()` cuando se desea chequear `NaN`.**
+* **Utilisez `isNaN()` pour vérifier `NaN`.**
 
   eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
 
@@ -1238,7 +1261,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **`typeof` debe ser comparado con una cadena de texto valida.**
+* **`typeof` doit être comparé à une chaine de charactères valide.**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1247,7 +1270,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **Expressiones Funciones inmediatamente invocadas (IIFEs) deben ser envueltas en paréntesis.**
+* **Les expressions de fonction immediatement invoquées (IIFEs) doivent être encadrées par des parenthèses.**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1258,7 +1281,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   const getName = (function () { })()   // ✓ ok
   ```
 
-* **El `*` en expresiones `yield*` deben tener un espacio en blanco antes y despues.**
+* **Le `*` dans les expressions `yield*` doit être précédé et suivi d'un espace.**
 
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
@@ -1267,7 +1290,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   yield * increment()   // ✓ ok
   ```
 
-* **Evitar condiciones Yoda.**
+* **Evitez les conditions Yoda.**
 
   eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
 
@@ -1276,18 +1299,22 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   if (age === 42) { }    // ✓ ok
   ```
 
-## Puntos y comas (semicolons)
+## Point-virgules
 
-* Sin puntos y comas. (see: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
+* Pas de point-virgules. (voir: [1](http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding), [2](http://inimino.org/%7Einimino/blog/javascript_semicolons), [3](https://www.youtube.com/watch?v=gsfbh17Ax9I))
 
   eslint: [`semi`](http://eslint.org/docs/rules/semi)
 
   ```js
   window.alert('hi')   // ✓ ok
-  window.alert('hi');  // ✗ evitar
+  window.alert('hi');  // ✗ avoid
   ```
 
-* Nunca empezar una linea con `(`, `[`, o `` ` ``. Este es el único problema cuando se omiten los puntos y comas, y `standard` te protege de problemas potenciales
+* Ne commencez jamais une ligne avec `(`, `[`, `` ` ``, ou autres possibilités improbables.
+
+  C'est le seul piège avec l'omission des point-virgules, et `standard` vous protège contre ce probleme potentiel.
+
+  (La liste complète est: `[`, `(`, `` ` ``, `+`, `*`, `/`, `-`, `,`, `.`, mais la plupart n'apparaitront jamais en début de ligne dans un vrai bloc de code.)
 
   eslint: [`no-unexpected-multiline`](http://eslint.org/docs/rules/no-unexpected-multiline)
 
@@ -1297,7 +1324,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
     window.alert('ok')
   }())
 
-  // ✗ evitar
+  // ✗ avoid
   (function () {
     window.alert('ok')
   }())
@@ -1307,7 +1334,7 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   // ✓ ok
   ;[1, 2, 3].forEach(bar)
 
-  // ✗ evitar
+  // ✗ avoid
   [1, 2, 3].forEach(bar)
   ```
 
@@ -1315,22 +1342,21 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   // ✓ ok
   ;`hello`.indexOf('o')
 
-  // ✗ evitar
+  // ✗ avoid
   `hello`.indexOf('o')
   ```
 
-  Nota: si te encuentras a menudo escribiendo código de esta manera,
-  quizás estás tratando de ser muy listo.
+  Note: Si vous écrivez souvent du code comme ça, vous essayez peut-être d'être trop astucieux.
 
-  esta taquigrafía es rechazada, en favor a expresiones claras y legibles, cuando sea posible.
+  Ce genre de raccourcis est découragé, en faveur d'expressions claires et lisibles, lorsque possible.
 
-  En vez de esto:
+  Au lieu de:
 
   ```js
   ;[1, 2, 3].forEach(bar)
   ```
 
-  Se prefiere esto:
+  Ceci est préféré:
 
   ```js
   var nums = [1, 2, 3]
@@ -1338,56 +1364,52 @@ La mejor manera de aprender acerca de `standard` es instalarlo darle una prueba 
   ```
 
 
-## Lectura de ayuda con referencia hacia los puntos y comas
+## Lecture utile
 
 - [An Open Letter to JavaScript Leaders Regarding Semicolons][1]
 - [JavaScript Semicolon Insertion – Everything you need to know][2]
 
-##### También un video:
+##### Et une video:
 
 - [Are Semicolons Necessary in JavaScript? - YouTube][3]
 
-Los minificadores de código populares hoy en día están basados en AST
-(Árbol abstracto de sintaxis), de manera que pueden gestionar JavaScript
-sin puntos y comas sin problemas (puntos y comas no son requeridos en JavaScript).
+Tous les minificateurs populaires de code utilisés aujourd'hui utilisent la minification basées sur AST, donc ils peuvent manipuler le JavaScript sans point-virgules sans problème (depuis que les point-virgules ne sont pas requis avec JavaScript).
 
-##### Extrácto de *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
+##### Extrait de *["An Open Letter to JavaScript Leaders Regarding Semicolons"][1]*:
 
-[Depender de ASI (Inserción automática de puntos y comas)] es bastante seguro, y perfectamente válido que cualquier navegador web entiende, Compilador Closure, yuicompressor, packer y jsmin todos pueden perfectamente minificarlo. No existe impacto en el performance.
-
-Lamento que, en vez de educarlos, sus líderes en este lenguaje les han dado mentiras y miedos. Que sinverguenza. Yo te recomiendo aprender como las declaraciones realmente terminan en JavaScript (y en cuales casos no terminan), de esta manera tu puedes escribir código que encuentres hermoso.
-
-En general, `\n` termina una declaración a menos que
-La declaración tiene sin cerrar un paréntesis, array literal, o objeto literal o termina de una manera no válida (por instancia, terminar con `.` o `,`)
-La línea es `--` o `++` (en este caso esto decrementa/incrementa el proximo token)
-Es un `for()`, `while()`, `do`, `if()`, o `else`, no exista una llave `{`
-La próxima línea empieza con `[`, `(`, `+`, `*`, `/`, `-`, `,`, `.` o algún operador binario que solo se encuentra entre dos tokens en un sola expresión
-
-El primero es bastante obvio. Incluso JSLint no tiene problemas con caracteres `\n` en JSON y constructores entre paréntesis, y con declaraciones `var` que lapsan múltiples líneas terminando con `,`.
-
-El segundo es super raro. Yo nunca he visto un caso (fuera de este tipo de conversaciones) donde quisieras escribir `i\n++\nj`, pero, de hecho eso es analizado como `i; ++j;`y  no `j++; j`.
-
-El tercero es bien entendido, es generalmente despreciado. `if (x)\ny()` es equivalente a `if (x) { y() }`. El constructor no termina hasta que alcanza un bloque o una declaración.
-
-`;` es una declaración JavaScript válida, entonces `if(x);` es el equivalente a `if(x){}` o “Sí x, hacer nada” Esto es más comúnmente aplicado a bucles donde el bucle también chequea si la función actualiza, No es usual, pero existe.
-
-El cuarto es generalmente el caso inducido “Oh no, necesitas puntos y comas”. Pero pasa que es bastante simple darle el prefijo a esas linas con puntos y comas, si no quieres que sean la continuacion de la linea previa. Por ejemplo, en vez de esto:
-
-```js
-foo();
-[1,2,3].forEach(bar);
-```
-
-podrias hacer esto:
-
-```js
-foo()
-;[1,2,3].forEach(bar)
-```
-
-La ventaja es que los prefijos son fáciles de notar, una vez te acostumbras a ver líneas que no empiecen con `(` o `[` sin puntos y comas.
-
-*Fin the la cita de "An Open Letter to JavaScript Leaders Regarding Semicolons".*
+> [Compter sur l'insertion automatique de point-virgule] est plutot sur, et est une syntaxe JavaScript parfaitement valide que chaque navigateur comprend. Closure compiler, yuicompressor, packer, et jsmin peuvent tous le minifier proprement. Il n'y a pas d'impact sur la performance.
+>
+> Je regrette qu'au lieu de vous éduquer, les leaders de cette communauté vous ont mentis. C'est honteux. Je recommende apprendre comment les instructions en JavaScript se terminent (et dans quels cas elles ne se terminent pas), pour que vous puissiez écrire du code qui vous plait.
+>
+> En general, `\n` termine une instruction sauf si:
+>   1. L'instruction a une parenthèse qui n'est pas fermée, un tableau ou objet littéral ou finit d'une facon qui n'est pas valide. (Par exemple, avec un `.` ou `,`.)
+>   2. La ligne est `--` ou `++` (au quel cas il diminuera ou augmentera l'element qui suit.)
+>   3. C'est un `for()`, `while()`, `do`, `if()`, ou `else`, et il n'y a pas de `{`
+>   4. La prochaine ligne commence par`[`, `(`, `+`, `*`, `/`, `-`, `,`, `.`, ou un autre opérateur binaire qui peut seulement être placé entre deux éléments dans une seule expression.
+>
+> Le premier point est plutôt évident. Même JSLint est ok avec les charactères `\n` en format JSON et les constructeurs entre parenthèses, et avec les instructions `var` qui couvrent plusieurs lignes finissant par `,`.
+>
+> Le second point est super bizarre. Je n'ai jamais vu un cas (en dehors de ce genre de conversations) ou vous voudriez écrire `i\n++\nj`, qui, au fait, est analysé comme `i; ++j`, et pas `i++; j`.
+>
+> Le troisième est bien compris, même si généralement méprisé. `if (x)\ny()` est l'equivalent de `if (x) { y() }`. Le concept ne finit pas jusqu'à ce qu'il atteigne un bloc ou une instruction.
+>
+> `;` est une instruction valide, donc `if(x);` est equivalent à `if(x){}` ou, “If x, do nothing.” C'est plus couramment appliqué aux boucles ou la boucle vérifie aussi si la fonction est mise à jour. C'est pas courant, mais ça arrive.
+>
+> Le quatrième est généralement le cas “oh non, vous avez besoin de point-virgules!”. Mais, il s'avère qu'il est plutot facile de *prefixer* ces lignes avec des point-virgules si vous n'avez pas l'intention de les utiliser comme continutions de la ligne précédente. Par exemple, au lieu de ça:
+>
+> ```js
+> foo();
+> [1,2,3].forEach(bar);
+> ```
+>
+> vous pourriez faire ça:
+>
+> ```js
+> foo()
+> ;[1,2,3].forEach(bar)
+> ```
+>
+> L'avantage c'est que les prefixes sont plus faciles à remarquer, quand vous êtes habitués à ne jamais voir de lignes commencant par `(` ou `[` sans point-virgules.
 
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
