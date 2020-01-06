@@ -1,7 +1,7 @@
 #!/bin/sh
 # Update AUTHORS.md based on git history.
 
-git log --reverse --format='%aN (%aE)' | perl -we '
+git log --reverse --format='%aN (<%aE>)' | perl -we '
 BEGIN {
   %seen = (), @authors = ();
 }
@@ -10,6 +10,7 @@ while (<>) {
 
   next if $seen{$_};
   next if /(support\@greenkeeper.io)/;
+  next if /(greenkeeper\[bot\]\@users.noreply.github.com)/;
   next if /(nate\@ngoldman.me)/;
   next if /(ahmad\@codeinchaos.com)/;
   next if /(emanuele.stoppa\@baml.com)/;

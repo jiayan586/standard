@@ -5,6 +5,7 @@
   <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/RULES-fr.md">Français</a> •
   <a href="/docs/RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/RULES-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/RULES-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
@@ -36,8 +37,12 @@ your code.
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
   ```js
-  console.log('hello there')
-  $("<div class='box'>")
+  console.log('hello there')    // ✓ ok
+  console.log("hello there")    // ✗ avoid
+  console.log(`hello there`)    // ✗ avoid
+
+  $("<div class='box'>")        // ✓ ok
+  console.log(`hello ${name}`)  // ✓ ok
   ```
 
 * **No unused variables.**
@@ -182,7 +187,7 @@ your code.
   ```
 
 * **Declare browser globals** with a `/* global */` comment.<br>
-  Exceptions are: `window`, `document` and `navigator`.<br>
+  Exceptions are: `window`, `document`, and `navigator`.<br>
   Prevents accidental use of poorly-named browser globals like `open`, `length`,
   `event`, and `name`.
 
@@ -884,8 +889,9 @@ your code.
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const octal = 042         // ✗ avoid
+  const decimal = 34        // ✓ ok
+  const octalString = '042' // ✓ ok
   ```
 
 * **No octal escape sequences in string literals.**

@@ -5,6 +5,7 @@
   <a href="/docs/RULES-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/RULES-fr.md">Français</a> •
   <a href="/docs/RULES-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/RULES-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/RULES-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/RULES-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/RULES-zhcn.md">简体中文 (Simplified Chinese)</a> •
@@ -880,8 +881,9 @@ La meilleure façon d'apprendre plus sur `standard` c'est de l'installer et de l
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
   ```js
-  const num = 042     // ✗ avoid
-  const num = '042'   // ✓ ok
+  const octal = 042         // ✗ avoid
+  const decimal = 34        // ✓ ok
+  const octalString = '042' // ✓ ok
   ```
 
 * **Pas de séquence d'echappement octale dans les chaines de charactères littérales.**

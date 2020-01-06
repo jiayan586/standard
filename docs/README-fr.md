@@ -18,6 +18,7 @@
   <a href="/docs/README-esla.md">Español (Latinoamérica)</a> •
   <a href="/docs/README-fr.md">Français</a> •
   <a href="/docs/README-iteu.md">Italiano (Italian)</a> •
+  <a href="/docs/README-ja.md">日本語 (Japanese)</a> •
   <a href="/docs/README-kokr.md">한국어 (Korean)</a> •
   <a href="/docs/README-ptbr.md">Português (Brasil)</a> •
   <a href="/docs/README-zhcn.md">简体中文 (Simplified Chinese)</a> •
@@ -71,8 +72,8 @@ npm install standard --save-dev
 [1]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
 [2]: http://inimino.org/~inimino/blog/javascript_semicolons
 [3]: https://www.youtube.com/watch?v=gsfbh17Ax9I
-[4]: /RULES.md#semicolons
-[5]: /RULES.md#javascript-standard-style
+[4]: RULES-fr.md#semicolons
+[5]: RULES-fr.md#javascript-standard-style
 
 Pour avoir une meilleure idée, jetez un coup d'oeil à
 [un exemple](https://github.com/expressjs/body-parser/blob/master/index.js) écrit
@@ -189,26 +190,47 @@ ESLint"](https://www.youtube.com/watch?v=kuHfMw8j4xk). Dans cette présentation,
 
 Beaucoup de monde!
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) |
-|---|---|---|---|---|
+[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodejs.png>](https://nodejs.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/npm.png>](https://www.npmjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/github.png>](https://github.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/elastic.png>](https://www.elastic.co) |
+|---|---|---|---|
 
-| [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
-|---|---|---|---|---|
+[<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nuxtjs.png>](https://nuxtjs.org/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) |
+|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/express.png>](http://expressjs.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
-|---|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/mongodb.jpg>](https://www.mongodb.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zendesk.png>](https://www.zendesk.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/brave.png>](https://www.brave.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zeit.png>](https://zeit.co) |
+|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/atom.png>](https://atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/electron.png>](http://electron.atom.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
-|---|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nearform.png>](http://www.nearform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/typeform.png>](https://www.typeform.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/gov-uk.png>](https://gds.blog.gov.uk) |
+|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
-|---|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/heroku.png>](https://www.heroku.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/saucelabs.png>](https://saucelabs.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/automattic.png>](https://automattic.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/godaddy.png>](https://www.godaddy.com) |
+|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/nodesource.png>](https://nodesource.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
-|---|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webtorrent.png>](https://webtorrent.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ipfs.png>](https://ipfs.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/dat.png>](https://datproject.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitcoinjs.png>](https://bitcoinjs.org) |
+|---|---|---|---|
 
-[<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=150 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | | |
-|---|---|---|---|---|
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/voltra.png>](https://voltra.co) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/treasuredata.png>](https://www.treasuredata.com) | [<img alt="Free MIDIs, MIDI file downloads" width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bitmidi.png>](https://bitmidi.com) | [<img width=190 alt="College essays, AP notes" src=https://cdn.rawgit.com/standard/standard/master/docs/logos/studynotes.jpg>](https://www.apstudynotes.org) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/optiopay.png>](https://www.optiopay.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/jaguar-landrover.png>](https://www.jlrtechincubator.com/jlrti/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/bustle.jpg>](https://www.bustle.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/zentrick.png>](https://www.zentrick.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/greenkeeper.png>](https://greenkeeper.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/karma.png>](https://karma-runner.github.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/taser.png>](https://www.taser.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/neo4j.png>](https://www.neo4j.com) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/rentograph.png>](https://rentograph.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/eaze.png>](https://www.eaze.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/ctrl-alt-deseat.png>](https://www.ctrlaltdeseat.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/clevertech.png>](https://clevertech.biz) |
+|---|---|---|---|
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/aragon.png>](https://aragon.org) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/flowsent.png>](https://www.flowsent.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/puma-browser.png>](https://www.pumabrowser.com/) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/webstorm.png>](https://www.jetbrains.com/webstorm/) |
+|---|---|---|---|
+
+
+| [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/fastify.png>](https://www.fastify.io) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/scuttlebutt.png>](https://www.scuttlebutt.nz) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/solid.png>](https://solid.inrupt.com) | [<img width=190 src=https://cdn.rawgit.com/standard/standard/master/docs/logos/grab.png>](https://www.grab.com) |
+|---|---|---|---|
+
+
+| Your logo here | Your logo here | Your logo here | Your logo here |
+|---|---|---|---|
+
 
 En plus de ces entreprises, beaucoup de membres de la communauté utilisent `standard` sur des projets qui sont [trop nombreux](https://raw.githubusercontent.com/standard/standard-packages/master/all.json)
 pour les lister ici.
@@ -245,7 +267,7 @@ installez **[standardjs-snippets][atom-3]**.
 [atom-2]: https://atom.io/packages/standard-formatter
 [atom-3]: https://atom.io/packages/standardjs-snippets
 [atom-4]: https://atom.io/packages/linter-js-standard-engine
-[atom-5]: https://github.com/Flet/standard-engine
+[atom-5]: https://github.com/standard/standard-engine
 
 ### Visual Studio Code
 
@@ -506,17 +528,17 @@ Si `standard` est installé globalement (`npm install standard --global`), soyez
 
 ### TypeScript
 
-Pour utiliser TypeScript, vous allez devoir éxécuter `standard` avec `typescript-eslint-parser` comme parseur,
+Pour utiliser TypeScript, vous allez devoir éxécuter `standard` avec `@typescript-eslint/parser` comme parseur,
 `eslint-plugin-typescript` comme plugin, et dire à standard de linter les fichiers `*.ts` (puisqu'il ne le fait pas par défaut).
 
 ```bash
-npm install typescript-eslint-parser eslint-plugin-typescript --save-dev
+npm install @typescript-eslint/parser eslint-plugin-typescript --save-dev
 ```
 
 Ensuite éxécutez:
 
 ```bash
-$ standard --parser typescript-eslint-parser --plugin typescript *.ts
+$ npm install @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
 ```
 
 Ou, ajoutez ça au `package.json`:
@@ -524,8 +546,8 @@ Ou, ajoutez ça au `package.json`:
 ```json
 {
   "standard": {
-    "parser": "typescript-eslint-parser",
-    "plugins": [ "typescript" ]
+    "parser": "@typescript-eslint/parser",
+    "plugins": [ "@typescript-eslint/eslint-plugin" ]
   }
 }
 ```
@@ -536,8 +558,8 @@ Avec ça dans le `package.json`, vous pouvez éxécuter:
 standard *.ts
 ```
 
-Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `typescript-eslint-parser` et `eslint-plugin-typescript` globalement aussi,
-avec `npm install typescript-eslint-parser eslint-plugin-typescript --global`.
+Si `standard` est installé globalement (`npm install standard --global`), soyez sur d'installer `@typescript-eslint/parser` et `eslint-plugin-typescript` globalement aussi,
+avec `npm install @typescript-eslint/parser eslint-plugin-typescript --global`.
 
 ## Et Mocha, Jasmine, QUnit, etc?
 
@@ -718,14 +740,14 @@ Envie de discuter? Joignez les contributeurs sur IRC dans la chaine `#standard` 
 Voici quelques modules importants dans l'ecosystème `standard`:
 
 - **[standard](https://github.com/standard/standard)** - ce repo
-  - **[standard-engine](https://github.com/flet/standard-engine)** - le moteur cli pour les règles eslint
+  - **[standard-engine](https://github.com/standard/standard-engine)** - le moteur cli pour les règles eslint
   - **[eslint-config-standard](https://github.com/standard/eslint-config-standard)** - les règles eslint pour standard
   - **[eslint-config-standard-jsx](https://github.com/standard/eslint-config-standard-jsx)** - les règles eslint pour standard (JSX)
-  - **[eslint-plugin-standard](https://github.com/xjamundx/eslint-plugin-standard)** - règles eslint customisées pour standard (ne fait pas partie de eslint core)
+  - **[eslint-plugin-standard](https://github.com/standard/eslint-plugin-standard)** - règles eslint customisées pour standard (ne fait pas partie de eslint core)
   - **[eslint](https://github.com/eslint/eslint)** - le linteur qui alimente standard
 - **[snazzy](https://github.com/standard/snazzy)** - résultats de standard plus jolis dans le terminal
 - **[standard-www](https://github.com/standard/standard-www)** - le code pour https://standardjs.com
-- **[semistandard](https://github.com/Flet/semistandard)** - standard, avec point-virgules (si nécessaire)
+- **[semistandard](https://github.com/standard/semistandard)** - standard, avec point-virgules (si nécessaire)
 
 Il y a aussi plein de **[plugins pour editeur](#are-there-text-editor-plugins)**, une liste de
 **[modules npm qui utilisent `standard`](https://github.com/standard/standard-packages)**,
