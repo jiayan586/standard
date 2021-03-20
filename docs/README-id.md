@@ -232,13 +232,13 @@ Untuk formating otomatis, pasang **[standard-formatter][atom-2]**. Untuk snippet
 
 ### Visual Studio Code
 
-Pasang **[vscode-standardjs][vscode-1]**. (Sudah termasuk dukungan untuk pem-format otomatis.)
+Pasang **[vscode-standard][vscode-1]**. (Sudah termasuk dukungan untuk pem-format otomatis.)
 
 Snippets untuk JS, pasang **[vscode-standardjs-snippets][vscode-2]**. Snippets untuk React, pasang **[vscode-react-standard][vscode-3]**.
 
-[vscode-1]: https://marketplace.visualstudio.com/items/chenxsan.vscode-standardjs
+[vscode-1]: https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard
 [vscode-2]: https://marketplace.visualstudio.com/items?itemName=capaj.vscode-standardjs-snippets
-[vscode-3]: https://marketplace.visualstudio.com/items/TimonVS.ReactSnippetsStandard
+[vscode-3]: https://marketplace.visualstudio.com/items?itemName=TimonVS.ReactSnippetsStandard
 
 ### Vim
 
@@ -284,7 +284,7 @@ untuk `standard` langsung didalam IDE.
 
 Jika kamu lebih suka untuk mengkonfigurasi `standard` secara manual, [ikuti arahan disini][webstorm-1]. Arahan tersebuh dapat diaplikasikan kedalam seluruh produk JetBrains, termasuk PhpStorm, IntelliJ, RubyMine, etc.
 
-[webstorm-1]: docs/webstorm.md
+[webstorm-1]: webstorm.md
 
 ## Apakah terdapat badge readme?
 
@@ -426,13 +426,13 @@ Untuk mendukun fitur bahasa eksperimental, `standard` menspesifikasikan dukungan
 Untuk mendukung parser kustom, pertama pasang dahulu dari npm:
 
 ```bash
-npm install babel-eslint --save-dev
+npm install @babel/eslint-parser --save-dev
 ```
 
 Lalu jalankan:
 
 ```bash
-$ standard --parser babel-eslint
+$ standard --parser @babel/eslint-parser
 ```
 
 Atau, tambahkan ini kedalam `package.json`:
@@ -440,7 +440,7 @@ Atau, tambahkan ini kedalam `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint"
+    "parser": "@babel/eslint-parser"
   }
 }
 ```
@@ -453,16 +453,16 @@ Untuk mendukung varian bahasa dari Javascript, `standard` mendukung menspesifika
 
 ### Flow
 
-Untuk menggunakan Flow, kamu harus menjalankan `standard` dengan `babel-eslint` sebagai parsernya dan `eslint-plugin-flowtype` sebagai pluginnya.
+Untuk menggunakan Flow, kamu harus menjalankan `standard` dengan `@babel/eslint-parser` sebagai parsernya dan `eslint-plugin-flowtype` sebagai pluginnya.
 
 ```bash
-npm install babel-eslint eslint-plugin-flowtype --save-dev
+npm install @babel/eslint-parser eslint-plugin-flowtype --save-dev
 ```
 
 Lalu jalankan:
 
 ```bash
-$ standard --parser babel-eslint --plugin flowtype
+$ standard --parser @babel/eslint-parser --plugin flowtype
 ```
 
 Atau, tambahkan ini kedalam `package.json`:
@@ -470,7 +470,7 @@ Atau, tambahkan ini kedalam `package.json`:
 ```json
 {
   "standard": {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
     "plugins": [ "flowtype" ]
   }
 }
@@ -645,7 +645,7 @@ Lint sumber `text` yang disediakan. Objek `opts` bisa juga disediakan:
   globals: [],  // variabel global kustom untuk dideklarasikan
   plugins: [],  // plugin eslint kustom
   envs: [],     // environment kustom eslint
-  parser: ''    // parser js kustom (e.g. babel-eslint)
+  parser: ''    // parser js kustom (e.g. @babel/eslint-parser)
 }
 ```
 Option tambahan mungkin di ambil dari `package.json` jika ditemukan didalam direktori yang sedang digunakan.
@@ -688,7 +688,7 @@ var opts = {
   globals: [],  // variabel global untuk dideklarasikan
   plugins: [],  // plugin eslint
   envs: [],     // environment eslint
-  parser: ''    // parser js (e.g. babel-eslint)
+  parser: ''    // parser js (e.g. @babel/eslint-parser)
 }
 ```
 
